@@ -13,13 +13,12 @@ const conf = new Snoowrap({
 const client = new Snoostorm(conf);
 
 const streamOptions = {
-    subreddit: 'testingground4bots',
-    results: 25
+  subreddit: 'testingground4bots',
+  results: 25
 };
 
 const comments = client.CommentStream(streamOptions);
 
-// On comment, perform whatever logic you want to do
 comments.on('comment', (comment) => {
-    console.log(comment);
+  console.log(comment);
 });
